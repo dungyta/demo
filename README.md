@@ -92,20 +92,12 @@ python dolly_zoom.pywd
 #### 1. Geometry
 **Vertices**: A regular tetrahedron is defined with 4 vertices:
 
-\[
-V = \begin{bmatrix}
-(0, 0, 0), & (1, 0, 0), & \left(0.5, \frac{\sqrt{3}}{2}, 0\right), & \left(0.5, \frac{\sqrt{3}}{6}, \frac{\sqrt{2}}{3}\right)
-\end{bmatrix}
-\]
+ ![1](images/1.png)
 
 **Faces**: The tetrahedron has 4 triangular faces:
 
-\[
-F = \begin{bmatrix}
-(0, 1, 2), & (0, 1, 3), & (1, 2, 3), & (0, 2, 3)
-\end{bmatrix}
-\]
-Vertex Colors: Each vertex is assigned a distinct RGB color (Red, Green, Blue, Yellow).
+![2](images/2.png)
+**Vertex Colors**: Each vertex is assigned a distinct RGB color (Red, Green, Blue, Yellow).
 #### 2. Usage
 ```bash
 python tetrahedron.py
@@ -121,23 +113,11 @@ python tetrahedron.py
 
    **Vertices**: A cube is defined with 8 vertices, centered at \((0, 0, 0)\):
 
-   \[
-   V = \begin{bmatrix}
-   (-0.5, -0.5, -0.5), & (0.5, -0.5, -0.5), & (0.5, 0.5, -0.5), & (-0.5, 0.5, -0.5), \\
-   (-0.5, -0.5, 0.5), & (0.5, -0.5, 0.5), & (0.5, 0.5, 0.5), & (-0.5, 0.5, 0.5)
-   \end{bmatrix}
-   \]
-
+   ![3](images/3.png)
    **Faces**: The cube has 6 faces, each represented by two triangles (12 triangles total):
-
-   \[
-   F = \begin{bmatrix}
-   (0, 1, 2), & (0, 2, 3), & (4, 5, 6), & (4, 6, 7), \\
-   (0, 1, 5), & (0, 5, 4), & (1, 2, 6), & (1, 6, 5), \\
-   (2, 3, 7), & (2, 7, 6), & (3, 0, 4), & (3, 4, 7)
-   \end{bmatrix}
-   \]
-
+    
+   ![4](images/4.png)
+ 
    **Textures**: All vertices are assigned a uniform sky-blue color (\(RGB = [0.1, 0.7, 1.0]\)).
 
 2. **Rendering**:
@@ -200,19 +180,12 @@ producing a useful visualization, and an important first step toward debugging.
 Running `python -m starter.camera_transforms` produces the following image using
 the camera extrinsics rotation `R_0` and translation `T_0`:
 
-![Cow render](images/transform_none.jpg)
-
 
 What are the relative camera transformations that would produce each of the following
 output images? You should find a set (R_relative, T_relative) such that the new camera
 extrinsics with `R = R_relative @ R_0` and `T = R_relative @ T_0 + T_relative` produces
 each of the following images:
 
-
-![Cow render](images/transform1.jpg)
-![Cow render](images/transform3.jpg)
-![Cow render](images/transform4.jpg)
-![Cow render](images/transform2.jpg)
 
 change the value of  R_relative and T_relative to get different camera position
 **Usage**
